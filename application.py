@@ -3,8 +3,7 @@ from flask import Flask, Response, request, jsonify
 import json
 
 app = flask.Flask(__name__)
-app.config["DEBUG"] = True
-app.config["SERVER_NAME"] = "127.0.0.1:1024"
+# app.config["DEBUG"] = True
 responseJsonDir = './responseJsonResources/'
 responseHtmlDir = './responseHtmlResources/'
 configurationFilePath = './configuration.json'
@@ -51,4 +50,4 @@ json_object = json.load(config_file)
 config_file.close()
 iterate_json(json_object)
 
-app.run()
+# app.run()
