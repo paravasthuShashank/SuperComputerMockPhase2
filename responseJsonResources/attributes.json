@@ -1,0 +1,121 @@
+{ 
+
+    "functions": [ 
+
+        "RAW",  
+
+        "AVG",  
+
+        "SUM",  
+
+        "MIN",  
+
+        "MAX" 
+
+    ],  
+
+    "classes": [ 
+
+        "Port",  
+
+        "Device",  
+
+        "Switch",  
+
+        "Bridge",  
+
+        "Computer",  
+
+        "LogicalServer",  
+
+        "Site",  
+
+        "PortsGroup" 
+
+    ],  
+
+    "counters": [ 
+
+        "Infiniband_MBIn",  
+
+        "Infiniband_PckIn",  
+
+        "Infiniband_InSize",  
+
+        "Infiniband_MBOut",  
+
+        "Infiniband_PckOut",  
+
+        "Infiniband_OutSize",  
+
+        "Infiniband_MBInRate",  
+
+        "Infiniband_PckInRate",  
+
+        "Infiniband_MBOutRate",  
+
+        "Infiniband_PckOutRate",  
+
+        "Infiniband_SymbolErrors",  
+
+        "Infiniband_LinkRecovers",  
+
+        "Infiniband_LinkDowned",  
+
+        "Infiniband_RcvErrors",  
+
+        "Infiniband_RcvRemotePhysErrors",  
+
+        "Infiniband_RcvSwRelayErrors",  
+
+        "Infiniband_XmtDiscards",  
+
+        "Infiniband_XmtConstraintErrors",  
+
+        "Infiniband_RcvConstraintErrors",  
+
+        "Infiniband_LinkIntegrityErrors",  
+
+        "Infiniband_ExcBufOverrunErrors",  
+
+        "Infiniband_VL15Dropped",  
+
+        "Infiniband_SymbolErrors_Delta",  
+
+        "Infiniband_LinkRecovers_Delta",  
+
+        "Infiniband_LinkDowned_Delta",  
+
+        "Infiniband_RcvErrors_Delta",  
+
+        "Infiniband_RcvRemotePhysErrors_Delta",  
+
+        "Infiniband_RcvSwRelayErrors_Delta",  
+
+        "Infiniband_XmtDiscards_Delta",  
+
+        "Infiniband_XmtConstraintErrors_Delta",  
+
+        "Infiniband_RcvConstraintErrors_Delta",  
+
+        "Infiniband_LinkIntegrityErrors_Delta",  
+
+        "Infiniband_ExcBufOverrunErrors_Delta",  
+
+        "Infiniband_VL15Dropped_Delta",  
+
+        "Infiniband_CBW",  
+
+        "Infiniband_Normalized_CBW",  
+
+        "Infiniband_Normalized_MBOut",  
+
+        "Infiniband_XmitWait",  
+
+        "Infiniband_NormalizedXW",  
+
+        "Infiniband_CumulativeErrors" 
+
+    ] 
+
+} 

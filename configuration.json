@@ -1,0 +1,29 @@
+{
+  "/ufmRest/monitoring/attributes" : {
+      "endpoint": "func1",
+      "responseJsonFileName" : "attributes.json"
+    },
+
+  "/ufmRest/resources/systems" : {
+      "endpoint": "func2",
+      "responseJsonFileName" : "resources.json"
+    },
+
+  "/ufmRest/monitoring/start" : {
+      "endpoint" : "func3",
+      "html" : "startPage.html",
+      "headers" : {
+        "Location" : "https://supercomputermockserviceexample1.azurewebsites.net/ufmRest/monitoring/session/1000"
+      }
+    },
+
+  "/ufmRest/monitoring/session/1000/data" : {
+      "endpoint": "func4",
+      "responseJsonFileName" : "data.json"
+    },
+
+  "/ufmRest/monitoring/session/1000" : {
+      "endpoint": "func5",
+      "html": "deletePage.html"
+    }
+}
