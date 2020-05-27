@@ -1,4 +1,9 @@
 {
+  "/" : {
+    "endpoint" : "func0",
+    "html" : "basic.html"
+  },
+  
   "/ufmRest/monitoring/attributes" : {
       "endpoint": "func1",
       "responseJsonFileName" : "attributes.json"
