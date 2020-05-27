@@ -19,7 +19,11 @@ def func():
         responseJsonFile = open(responseJsonFilePath)
         responseJson = json.load(responseJsonFile)
         responseJsonFile.close()
-        response.set_data(json.dumps(responseJson))
+        response = app.response_class(
+            response=json.dumps(responseJson),
+            status=200,
+            mimetype='application/json'
+        )
 
     if("html" in json_object[url]):
         global responseHtmlDir
@@ -27,8 +31,12 @@ def func():
         responseHtmlFile = open(responseHtmlFilePath)
         responseHtml = responseHtmlFile.read()
         responseHtmlFile.close()
-        response.set_data(str(responseHtml))
-
+        response = app.response_class(
+            response=str(responseHtml),
+            status=200,
+            mimetype='application/html'
+        )
+        
     if("headers" in json_object[url]):
         print("in headers ...")
         headers = json_object[url]["headers"]
