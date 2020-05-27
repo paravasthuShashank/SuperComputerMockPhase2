@@ -19,7 +19,7 @@ def func():
         responseJsonFile = open(responseJsonFilePath)
         responseJson = json.load(responseJsonFile)
         responseJsonFile.close()
-        response.set_data(str(responseJson))
+        response.set_data(json.dumps(responseJson))
 
     if("html" in json_object[url]):
         global responseHtmlDir
