@@ -35,7 +35,7 @@ def func():
         responseHtmlFile = open(responseHtmlFilePath)
         responseHtml = responseHtmlFile.read()
         responseHtmlFile.close()
-        response.set_data(str(responseJson))
+        response.set_data(responseHtml)
 
     return response
 
