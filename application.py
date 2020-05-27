@@ -42,7 +42,7 @@ def func():
 
 def iterate_json(json_object):
     for url,response in json_object.items():
-        app.add_url_rule(url,response["endpoint"],func,methods=['GET','POST'])
+        app.add_url_rule(url,response["endpoint"],func,methods=['GET','POST','DELETE'])
 
 
 config_file = open(configurationFilePath)
