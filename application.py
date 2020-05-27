@@ -12,24 +12,7 @@ def func():
     global json_object
     response = Response()
     url = request.path
-
-    if("responseJsonFileName" in json_object[url]):
-        global responseJsonDir
-        responseJsonFilePath = responseJsonDir + json_object[url]["responseJsonFileName"]
-        responseJsonFile = open(responseJsonFilePath)
-        responseJson = json.load(responseJsonFile)
-        responseJsonFile.close()
-        response.set_data(json.dumps(responseJson))
-
-    if("html" in json_object[url]):
-        global responseHtmlDir
-        responseHtmlFilePath = responseHtmlDir + json_object[url]["html"]
-        responseHtmlFile = open(responseHtmlFilePath)
-        responseHtml = responseHtmlFile.read()
-        responseHtmlFile.close()
-        response.set_data(str(responseJson))
-
-        
+    
     if("headers" in json_object[url]):
         print("in headers ...")
         headers = json_object[url]["headers"]
@@ -37,6 +20,22 @@ def func():
         print(str(headers))
         for header,value in headers.items():
             response.headers[header] = value
+
+    if("responseJsonFileName" in json_object[url]):
+        global responseJsonDir
+        responseJsonFilePath = responseJsonDir + json_object[url]["responseJsonFileName"]
+        responseJsonFile = open(responseJsonFilePath)
+        responseJson = json.load(responseJsonFile)
+        responseJsonFile.close()
+        return jsonify(responseJson)
+        
+    if("html" in json_object[url]):
+        global responseHtmlDir
+        responseHtmlFilePath = responseHtmlDir + json_object[url]["html"]
+        responseHtmlFile = open(responseHtmlFilePath)
+        responseHtml = responseHtmlFile.read()
+        responseHtmlFile.close()
+        response.set_data(str(responseJson))
 
     return response
 
